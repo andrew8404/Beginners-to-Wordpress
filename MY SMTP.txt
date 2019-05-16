@@ -1,0 +1,24 @@
+﻿<?php
+/**
+ * Plugin Name: My SMTP Sever
+ * Plugin URI: http://your_domain.com
+ * Description: Setup the email smtp sever using my own domain name
+ * Author: amdin
+ * Author URI: http://author.yourdomian.com
+ * Version: 1.0
+ */
+ 
+ add_action( 'phpmailer_init', 'send_smtp_email' );
+function send_smtp_email( $phpmailer ) {
+	$phpmailer->isSMTP();
+	$phpmailer->Host       = 'smtp.yourdomain.com';  // smtp server name, starts and endes with apostrophe
+	$phpmailer->SMTPAuth   = false;   //true of false, no apostrophe
+	$phpmailer->Port       = 25;    // outgoing port, no apostrophe,can be 25,465 or 587
+	$phpmailer->Username   = 'xxx@your_domain.com';   //your real email account, starts and ends with apostrophe
+	$phpmailer->Password   = 'xxxxx';  //your email password, starts and endes with apostrophe
+	$phpmailer->SMTPSecure = 'ssl';  //protocol, can be 'ssl' or 'tls'
+	$phpmailer->From       = 'account@easevape.com';  //an email account that the receitp will see as the sender's email account
+	$phpmailer->FromName   = 'EaseVape';  // Sender's name
+}
+
+//ended,slashes here
