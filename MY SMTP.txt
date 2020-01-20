@@ -12,7 +12,7 @@
 function send_smtp_email( $phpmailer ) {
 	$phpmailer->isSMTP();
 	$phpmailer->Host       = 'smtp.yourdomain.com';  // smtp server name, starts and endes with apostrophe
-	$phpmailer->SMTPAuth   = false;   //true of false, no apostrophe
+	$phpmailer->SMTPAuth   = false;   //true or false, no apostrophe
 	$phpmailer->Port       = 25;    // outgoing port, no apostrophe,can be 25,465 or 587
 	$phpmailer->Username   = 'xxx@your_domain.com';   //your real email account, starts and ends with apostrophe
 	$phpmailer->Password   = 'xxxxx';  //your email password, starts and endes with apostrophe
