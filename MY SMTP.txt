@@ -17,8 +17,8 @@ function send_smtp_email( $phpmailer ) {
 	$phpmailer->Username   = 'xxx@your_domain.com';   //your real email account, starts and ends with apostrophe
 	$phpmailer->Password   = 'xxxxx';  //your email password, starts and endes with apostrophe
 	$phpmailer->SMTPSecure = 'ssl';  //protocol, can be 'ssl' or 'tls'
-	$phpmailer->From       = 'account@easevape.com';  //an email account that the receitp will see as the sender's email account
-	$phpmailer->FromName   = 'EaseVape';  // Sender's name
+	$phpmailer->From       = 'account@yourdomian.com';  //an email account that the receitp will see as the sender's email account
+	$phpmailer->FromName   = 'SENDERNAME';  // Sender's name
 }
 
 //ended,slashes here
